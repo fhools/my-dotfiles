@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/Users/fhools/.config/nvim/plugged/onedark.vim'
+let g:netrw_dirhist_5='/Users/fhools/code/githubs/bevy/crates/bevy_ecs'
+let g:netrw_dirhist_4='/Users/fhools/code/rust/raytracer-challenge-rs/src/types/src'
+let g:netrw_dirhist_3='/Users/fhools/code/rust/firecracker'
+let g:netrw_dirhist_2='/Users/fhools/.vim'
+let g:netrw_dirhist_1='/private/etc'
