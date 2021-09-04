@@ -20,6 +20,10 @@ Plug 'nvim-lua/completion-nvim'
 
 " Markdown Previewer
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+" Rust.vim for rustfmmt
+Plug 'rust-lang/rust.vim'
+
 call plug#end()
 
 "Not sure what this is, something about plugins probably
@@ -83,6 +87,9 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 EOF
+
+" Enable rust.vim's rustfmt run on save
+let g:rustfmt_autosave = 1
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
