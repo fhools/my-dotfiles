@@ -49,3 +49,5 @@ set pastetoggle=<F3>
 
 " Hybrid line number
 set number relativenumber
+
+set noswapfile

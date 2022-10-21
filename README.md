@@ -16,4 +16,12 @@ rustup +nightly component add rust-analyzer-preview
 
 
 # github token
+configure credential.helper=osxkeychain
+user.email = <github email login>
+user.name = <Your name>
+
+try to clone or push, it will ask for credentials
+
+# check github osx keychain
+security find-internet-password -l github.com
 

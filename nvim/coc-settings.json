@@ -1,0 +1,4 @@
+{
+  "diagnostic.errorSign": "✘",
+  "rust-analyzer.server.path": "/opt/homebrew/bin/rust-analyzer"
+}
