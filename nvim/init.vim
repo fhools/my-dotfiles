@@ -26,6 +26,13 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 "
 " CoC Rust 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'"
+
+
+"Primeagen's vim game
+Plug 'ThePrimeagen/vim-be-good'
 call plug#end()
 
 "Not sure what this is, something about plugins probably
@@ -368,9 +375,15 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " Setup python for pyx
 let g:python3_host_prog ='/opt/homebrew/Caskroom/miniforge/base/bin/python'
 
-" setup :grep to use ripgrep
-"     :grep <c-r> <c-w> will search for word under cursor
-if executable('rg') 
-	set grepprg=rg\ --vimgrep\ --hidden\ —glob ‘!.git’
-endif
+
+let mapleader = " " "map leader to spacebar
+
+" remap so that using pasting while in visual mode
+" will keep the pasted word still there instead of yanking
+" the new word into register
+xnoremap <leader>p "_dP
+
+" Ctrl keys to pop up FZF
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
 

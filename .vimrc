@@ -13,6 +13,8 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
+" Stop auto line break
+set textwidth=0
 " Syntax highlighting
 syntax on
 
@@ -35,7 +37,8 @@ imap aa <Esc>
 "Set Ctrl-N Ctrl-N to toggle line number display 
 :nmap <C-N><C-N> :set invnumber! relativenumber! <CR>
 set nowrap
-set autochdir
+" We are disabling auto change directory so we can use fzf better
+"set autochdir
 command CDC cd %:p:h
 
 " Show file status
@@ -51,3 +54,4 @@ set pastetoggle=<F3>
 set number relativenumber
 
 set noswapfile
+
