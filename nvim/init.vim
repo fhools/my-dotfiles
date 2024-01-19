@@ -4,6 +4,9 @@ set t_Co=256
 set t_AB=^[[48;5;%dm
 set t_AF=^[[38;5;%dm
 
+""" Leader to <space>
+let mapleader = " " "map leader to spacebar
+
 "Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
@@ -262,7 +265,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " Setup python for pyx
 let g:python3_host_prog ='/opt/homebrew/Caskroom/miniforge/base/bin/python'
 
-let mapleader = " " "map leader to spacebar
 
 " remap so that using pasting while in visual mode
 " will keep the pasted word still there instead of yanking
@@ -277,3 +279,7 @@ nnoremap <silent> <Leader>f :Rg<CR>
 set wrap
 set linebreak
 set showbreak=↪\
+
+" Copilot enable
+autocmd VimEnter * Copilot enable
+
